@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMaster AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <h2>CodeMaster AI</h2>
+
+        <button id="new-chat-btn">+ New Chat</button>
+
+        <div id="chat-history">
+            <p>No chats yet</p>
+        </div>
+
+    </div>
+
+    <div class="main">
+
+        <div class="header">
+
+            <h2>Offline Mode</h2>
+
+            <select id="model-select">
+
+                <h3>Offline Mode 🟢</h3>
+
+            </select>
+
+        </div>
+
+        <div id="chat-box"></div>
+
+        <div id="loading" style="display:none;">
+            🤖 Thinking...
+        </div>
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Ask CodeMaster AI..."
+            >
+
+            <button id="send-btn">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
